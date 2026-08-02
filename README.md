@@ -8,6 +8,17 @@ The Northstar Platform provides the core business services used across the Atlas
 
 The platform is undergoing an architectural modernization initiative to improve maintainability, scalability, and deployment reliability.
 
+## Upcoming Work
+
+The Architecture Review Board is currently evaluating several modernization initiatives.
+
+### TODO
+
+- [ ] Decompose CustomerService into smaller domain services
+- [ ] Standardize API error responses
+- [ ] Reduce synchronous service dependencies
+- [ ] Review domain boundaries within Customer Management
+
 ## Responsibilities
 
 - Business logic
