@@ -27,7 +27,7 @@ The Platform Team is preparing for the Atlas 4.0 modernization effort.
 - Minimize synchronous dependencies between platform components.
 - Clarify domain boundaries within Customer Management.
 - Preserve backward compatibility while modernizing legacy functionality.
-- 
+ 
 ## Running the Tests
 
 ```bash
