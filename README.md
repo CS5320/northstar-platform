@@ -15,15 +15,19 @@ Students should use this repository to examine how design principles appear in c
 - inconsistent error handling
 - maintainability and design for change
 
-## Current Engineering Concerns
+## Current Engineering Priorities
 
-- `CustomerService` performs too many unrelated responsibilities.
-- Validation logic is duplicated across modules.
-- Reporting logic is mixed with customer-management logic.
-- Services call external dependencies directly.
-- Error handling is inconsistent.
-- Some behavior is preserved only through characterization tests.
+The Platform Team is preparing for the Atlas 4.0 modernization effort.
 
+### Current Priorities
+
+- Improve service modularity by reducing oversized service classes.
+- Continue standardizing API behavior and error responses.
+- Reduce duplicated validation logic across services.
+- Minimize synchronous dependencies between platform components.
+- Clarify domain boundaries within Customer Management.
+- Preserve backward compatibility while modernizing legacy functionality.
+- 
 ## Running the Tests
 
 ```bash
