@@ -1,59 +1,36 @@
 # Northstar Platform
 
-The Northstar Platform provides the core business services used across the Atlas ecosystem. It exposes REST APIs consumed by the web application, mobile application, and internal engineering tools.
+This repository contains a representative implementation of several Atlas platform services used for software design analysis.
 
-## Current Status
+The implementation is intentionally incomplete and contains design problems that have accumulated over time. External systems such as authentication, notifications, and reporting have been replaced with simplified local implementations.
 
-⚠️ Active Development
+## Purpose
 
-The platform is undergoing an architectural modernization initiative to improve maintainability, scalability, and deployment reliability.
+Students should use this repository to examine how design principles appear in code, including:
 
-## Upcoming Work
+- abstraction and information hiding
+- cohesion and coupling
+- responsibility assignment
+- duplicated validation
+- inconsistent error handling
+- maintainability and design for change
 
-The Architecture Review Board is currently evaluating several modernization initiatives.
+## Current Engineering Concerns
 
-### TODO
+- `CustomerService` performs too many unrelated responsibilities.
+- Validation logic is duplicated across modules.
+- Reporting logic is mixed with customer-management logic.
+- Services call external dependencies directly.
+- Error handling is inconsistent.
+- Some behavior is preserved only through characterization tests.
 
-- [ ] Decompose CustomerService into smaller domain services
-- [ ] Standardize API error responses
-- [ ] Reduce synchronous service dependencies
-- [ ] Review domain boundaries within Customer Management
+## Running the Tests
 
-## Responsibilities
+```bash
+python -m pip install -e ".[dev]"
+pytest
+```
 
-- Business logic
-- REST API endpoints
-- Domain services
-- Integration with Authentication
-- Shared utilities
+## Important
 
-## Related Repositories
-
-- northstar-web
-- northstar-mobile
-- northstar-auth
-
-## Known Issues
-
-- Large service classes
-- Inconsistent API conventions
-- Legacy business logic mixed with newer components
-
-## Documentation
-
-Architecture documentation can be found in the **northstar-architecture** repository.
-
----
-
-## Maintainers
-
-Engineering Management
-
-- Emily Chen — Director of Engineering
-- Marcus Alvarez — Principal Software Architect
-
-For architecture questions, see the Architecture repository.
-
-> **Note**
->
-> This repository is actively maintained. Documentation may not always reflect the latest implementation. When conflicts arise, Architecture Decision Records (ADRs) are considered the authoritative source.
+Do not assume every design choice in this repository is good. The code is intended to be analyzed, critiqued, and redesigned.
